@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>LEOTECH Tech Shop</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:white;
+}
+
+header{
+background:red;
+color:white;
+text-align:center;
+padding:20px;
+font-size:30px;
+}
+
+.container{
+display:flex;
+}
+
+/* LEFT MENU */
+
+.sidebar{
+width:200px;
+background:red;
+color:white;
+height:100vh;
+}
+
+.sidebar a{
+display:block;
+padding:15px;
+color:white;
+text-decoration:none;
+}
+
+.sidebar a:hover{
+background:darkred;
+}
+
+/* MAIN CONTENT */
+
+.main{
+flex:1;
+padding:20px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.product{
+border:1px solid #ccc;
+padding:10px;
+text-align:center;
+}
+
+.product img{
+width:150px;
+height:120px;
+}
+
+/* CASHIER */
+
+.cashier{
+margin-top:40px;
+background:#f5f5f5;
+padding:20px;
+}
+
+/* ADMIN */
+
+.admin{
+margin-top:20px;
+background:#eeeeee;
+padding:20px;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px;
+margin:5px;
+cursor:pointer;
+}
+
+/* LOGIN */
+
+.loginbuttons{
+position:fixed;
+right:10px;
+top:100px;
+}
+
+.loginbox{
+display:none;
+position:fixed;
+right:10px;
+top:170px;
+background:#f5f5f5;
+padding:15px;
+border:1px solid #ccc;
+width:200px;
+}
+
+footer{
+background:red;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+.section{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+LEOTECH Tech Shop
+</header>
+
+<div class="container">
+
+<!-- LEFT MENU -->
+
+<div class="sidebar">
+
+<a href="#" onclick="show('home')">Home</a>
+
+<a href="#" onclick="show('about')">About Us</a>
+
+<a href="#" onclick="show('contact')">Contacts</a>
+
+</div>
+
+
+<div class="main">
+
+<!-- HOME -->
+
+<div id="home" class="section active">
+
+<h2>Our Tech Products</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=300&q=80">
+<h4>Laptop</h4>
+<p>High performance laptop for work and gaming.</p>
+<p>₱27,000</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<h4>Desktop Computer</h4>
+<p>Powerful desktop computer for productivity.</p>
+<p>₱37,000</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=300&q=80">
+<h4>Monitor</h4>
+<p>24 inch full HD monitor with clear display.</p>
+<p>₱16,000</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=300&q=80">
+<h4>Gaming Mouse</h4>
+<p>RGB gaming mouse with adjustable DPI.</p>
+<p>₱1,500</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?auto=format&fit=crop&w=300&q=80">
+<h4>Mechanical Keyboard</h4>
+<p>Durable keyboard for gaming and typing.</p>
+<p>₱5,000</p>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1677086813101-496781a0f327?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<h4>Headset</h4>
+<p>Clear sound headset with microphone.</p>
+<p>₱3,500</p>
+</div>
+
+</div>
+
+<!-- CASHIER -->
+
+<div class="cashier">
+
+<h3>Cashier Section</h3>
+
+<p>Item</p>
+<input type="text">
+
+<p>Quantity</p>
+<input type="number">
+
+<p>Price</p>
+<input type="number">
+
+<br>
+
+<button>Add Transaction</button>
+<button>Log Out</button>
+
+</div>
+
+<!-- ADMIN -->
+
+<div class="admin">
+
+<h3>Admin Access</h3>
+
+<button>View Transactions</button>
+<button>Update Transactions</button>
+<button>Delete Transactions</button>
+<button>Log Out</button>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<div id="about" class="section">
+
+<h2>About Us</h2>
+
+<p>
+Founded by Leo Castillo in 2020, our business started small but has quickly grown into a trusted name for quality tech products. With a passion for innovation and excellence, we’ve expanded our brand to offer a range of gadgets and devices that combine performance, reliability, and style.
+</p>
+
+<p>
+Our system was developed in collaboration with the talented students of PHINMA COC, bringing together fresh ideas and modern solutions to create a seamless shopping experience for our customers.
+</p>
+
+<p>
+At the heart of our business is a commitment to provide tech enthusiasts with the best products backed by knowledge, support, and dedication to customer satisfaction.
+</p>
+
+</div>
+
+<!-- CONTACT -->
+
+<div id="contact" class="section">
+
+<h2>Contacts</h2>
+
+<p>LEOTECH Tech Shop</p>
+
+<p>Location: Cagayan de Oro City, Philippines</p>
+
+<p>Phone: +63 963 261 5840</p>
+
+<p>Email: leotechshop@gmail.com</p>
+
+<p>Monday - Saturday : 9AM - 7PM</p>
+
+<p>Sunday : Closed</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LOGIN BUTTONS -->
+
+<div class="loginbuttons">
+
+<button onclick="login('cashier')">Cashier Login</button>
+<br>
+<button onclick="login('admin')">Admin Login</button>
+
+</div>
+
+<!-- LOGIN FORMS -->
+
+<div id="cashier" class="loginbox">
+
+<h4>Cashier Login</h4>
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</div>
+
+<div id="admin" class="loginbox">
+
+<h4>Admin Login</h4>
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</div>
+
+<footer>
+
+© 2026 LEOTECH Tech Shop
+
+</footer>
+
+<script>
+
+function login(id){
+var x=document.getElementById(id)
+
+if(x.style.display=="block"){
+x.style.display="none"
+}
+else{
+x.style.display="block"
+}
+
+}
+
+function show(name){
+
+var s=document.querySelectorAll(".section")
+
+for(var i=0;i<s.length;i++){
+s[i].classList.remove("active")
+}
+
+document.getElementById(name).classList.add("active")
+
+}
+
+</script>
+
+</body>
+
+</html>
